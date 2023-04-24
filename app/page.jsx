@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
 
-function IndexPage() {
+async function fetchUsers() {
+  const res = await fetch("http://reqres.in/api/users");
+  const data = await res.json();
+  return data.data
+}
+async function IndexPage() {
+  const users = await fetchUsers();
   return (
-    <div>IndexPage</div>
-  )
+    <div>
+      <h1>Index Page</h1>
+      <div>
+        {JSON.stringify(users)}
+      </div>
+    </div>
+  );
 }
 
-export default IndexPage
+export default IndexPage;
