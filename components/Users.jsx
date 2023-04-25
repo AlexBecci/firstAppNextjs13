@@ -16,16 +16,16 @@ function Users({ users }) {
                     router.push(`/users/${user.id}`);
                   }}
                 >
-                  <div className="hover:bg-gray-200 flex flex-row items-center border-b-2 border-gray-300">
-                    <div className="mr-auto mx-5">
+                  <div className="hover:bg-gray-200 flex flex-row items-center border-b-2 border-gray-300 duration-300 cursor-pointer">
+                    <div className="mx-1 sm:mr-auto sm:mx-5">
                       <h5 className="text-slate-800 text-lg">
                         {user.id} <span className="text-black">{user.first_name} {user.last_name}</span>
                       </h5>
                       <p className="text-sm">{user.email}</p>
                     </div>
-                    <div className="mx-5 my-1.5">
+                    <div className="mx-1 my-4 sm:mx-5 sm:my-1.5">
                       <img
-                        className="rounded-full"
+                        className="rounded-full h-auto w-auto"
                         src={user.avatar}
                         alt={user.email}
                       />

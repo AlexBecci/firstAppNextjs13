@@ -8,8 +8,8 @@ async function UsersPage({ params }) {
   const user = await getUser(params.id);
   return (
     <div className="text-center flex flex-wrap text-black">
-      <div className=" mx-auto my-5 border-2 shadow-sm rounded-lg">
-        <div className=" px-auto md:px-60 bg-gray-100">
+      <div className=" mx-auto my-5 border-2 shadow-sm rounded-lg border-gray-300">
+        <div className="px-20 sm:px-36 md:px-40 bg-gray-100 border-b-2 border-gray-300">
           <img className="mx-auto py-2" src={user.avatar} alt={user.email} />
         </div>
         <div className="bg-zinc-50  py-5">
